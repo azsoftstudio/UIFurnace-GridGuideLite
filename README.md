@@ -3,8 +3,8 @@
 # 💠 UI Furnace – Grid Guide Tool
 
 [![Unity Asset Store](https://img.shields.io/badge/Published_On-Unity_Asset_Store-000000?style=for-the-badge&logo=unity&logoColor=white)](https://u3d.as/3Cdk/)
-[![Made with Vanilla HTML/CSS/JS](https://img.shields.io/badge/Documentation-Vanilla_Web-0ea5e9?style=for-the-badge)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#)
+[![Made with Vanilla HTML/CSS/JS](https://img.shields.io/badge/Documentation-Vanilla_Web-0ea5e9?style=for-the-badge)](https://azsoftstudio.github.io/UIFurnace-GridGuideLite/)
+[![License: Unity](https://img.shields.io/badge/License-Unity-success?style=for-the-badge)](https://unity.com/legal/eula)
 
 *A premium, grid-based layout assistant for UI design in Unity.*
 
