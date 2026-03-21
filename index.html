@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Furnace Grid Guide | Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">💠</span>
+                    <span class="logo-text">Grid Guide</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-label">Getting Started</div>
+                <a href="#hero" class="nav-item active">Overview</a>
+                <a href="#quick-start" class="nav-item">Quick Start</a>
+                <a href="#installation" class="nav-item">Installation</a>
+
+                <div class="nav-label">Features</div>
+                <a href="#modes" class="nav-item">Grid Modes</a>
+                <a href="#behavior" class="nav-item">Layout Behavior</a>
+                <a href="#snapping" class="nav-item">Snapping & Appearance</a>
+                <a href="#core-features" class="nav-item">Detailed Features</a>
+
+                <div class="nav-label">Reference</div>
+                <a href="#shortcuts" class="nav-item">Shortcuts</a>
+                <a href="#limitations" class="nav-item">Limitations & FAQ</a>
+                <a href="#credits" class="nav-item">Credits & Support</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="breadcrumbs">
+                    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+                            fill="none">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
+                    Documentation <span class="arr">›</span> UI Furnace
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <path
+                            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                        </path>
+                    </svg>
+                </button>
+            </header>
+
+            <div class="content-wrapper">
+
+                <!-- Overview Section -->
+                <section id="hero" class="hero-section">
+                    <div class="tag">UI Furnace Framework</div>
+                    <h1 class="glow-text">Grid Guide Tool</h1>
+                    <p class="subtitle">A grid-based layout assistant for UI design in Unity. Provides visual grid
+                        overlays, snapping functionality, and flexible grid modes to help align and organize UI elements
+                        with precision.</p>
+
+                    <div class="workflow-container">
+                        <div class="workflow-step">Enable</div>
+                        <span class="workflow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="workflow-step">Select</div>
+                        <span class="workflow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="workflow-step">Customize</div>
+                        <span class="workflow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="workflow-step">Snap</div>
+                        <span class="workflow-arrow"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+                        <div class="workflow-step">Refine</div>
+                    </div>
+                </section>
+
+                <section id="overview">
+                    <h2>🔎 Overview</h2>
+                    <p>The <strong>UI Furnace – Grid Guide Tool</strong> is a grid-based layout assistant for UI design
+                        in Unity. It provides visual grid overlays, snapping functionality, and flexible grid modes to
+                        help align and organize UI elements with precision.</p>
+                    <p>Part of the UI Furnace framework, it is designed to streamline UI workflows and improve layout
+                        consistency.</p>
+                </section>
+
+                <!-- Quick Start -->
+                <section id="quick-start">
+                    <h2>⚡ Quick Start</h2>
+                    <p>Follow these steps to quickly set up and start using the UI Furnace – Grid Guide Tool in Unity.
+                    </p>
+
+                    <div class="step-content">
+                        <h3>1. Set-Up the Grid Guide</h3>
+                        <p>After importing the package:<br>
+                            Go to: <code>Tools → UI Furnace → Grid Manager</code><br>
+                            This will open the Grid Manager window.</p>
+                        <p><strong>Enable Grid Visibility:</strong><br>
+                            In the Grid Manager window, enable: <strong>Show Grid</strong></p>
+                        <img src="assets/image1.png" alt="Show Grid" class="doc-image">
+
+                        <h3>2. Configure the Grid</h3>
+                        <p>In the <strong>Grid Layout</strong> section, select your desired Grid Mode:</p>
+
+                        <div class="mode-comparison">
+                            <h4>🔹 Symmetry Mode</h4>
+                            <p>Adjust Spacing (X and Y axes) and Row / Column count. Use presets for quick setup.</p>
+                            <img src="assets/image4.png" alt="Symmetry Setup" class="doc-image">
+                            <img src="assets/image5.png" alt="Symmetry Result" class="doc-image">
+
+                            <h4>🔹 Dynamic Mode</h4>
+                            <p>Enable <strong>Grid Edit Mode</strong> to customize lines manually. Right click on your
+                                canvas or turn on the Add lines mode to add/delete lines. Grid lines also supports Snap
+                                to element.</p>
+                            <img src="assets/image6.png" alt="Dynamic Setup" class="doc-image">
+
+                            <p><strong>Use Layout Utilities (Dynamic Mode)</strong><br>
+                                Inside <code>Grid Layout → Layout Utilities</code>: Clear all lines or Automatically
+                                place lines.</p>
+                            <img src="assets/image7.png" alt="Dynamic Layout Utilities" class="doc-image">
+                        </div>
+
+                        <h3>3. Enable Snapping</h3>
+                        <p>In the <strong>Universal Snapping</strong> section:<br>
+                            Enable snapping and set your desired Snap Distance.</p>
+                        <p>👉 <em>UI elements will now snap to grid lines automatically when you drag them.</em></p>
+                        <img src="assets/image8.png" alt="Universal Snapping" class="doc-image">
+
+                        <h3>4. Customize Grid Appearance</h3>
+                        <p><strong>Grid Colors:</strong> Adjust main axis color, grid line color, and opacity.<br>
+                            <strong>Line Thickness:</strong> Set thickness for axis lines and grid lines.
+                        </p>
+                        <img src="assets/image9.png" alt="Grid Colors and Thickness" class="doc-image">
+
+                    </div>
+                </section>
+
+                <!-- Installation -->
+                <section id="installation">
+                    <h2>📦 Installation</h2>
+
+                    <h3>1. Requirements</h3>
+                    <ul>
+                        <li><strong>Unity Version:</strong> Unity 2021.3 (LTS) or newer. (Tested heavily up to Unity 6).
+                        </li>
+                        <li><strong>Dependencies:</strong> None. This tool runs entirely on built-in Unity Editor
+                            features.</li>
+                    </ul>
+
+                    <h3>2. Importing the Asset</h3>
+                    <ul>
+                        <li>Open your Unity project and navigate to <strong>Window > Package Manager</strong>.</li>
+                        <li>Select <strong>My Assets</strong> from the top-left dropdown.</li>
+                        <li>Search for <strong>UI Furnace Grid Guide (Lite)</strong>, click Download, and then click
+                            Import.</li>
+                        <li>In the Unity import window that pops up, hit Import again to bring all files into your
+                            project.</li>
+                    </ul>
+
+                    <h3>3. Initial Setup</h3>
+                    <p>To activate the tool and begin using it, you just need to open the main window:<br>
+                        Go to the top menu bar and select: <code>Tools > UI Furnace > Grid Manager</code></p>
+                    <p><strong>Recommended:</strong> Dock this new window somewhere convenient, like next to your
+                        Inspector or Hierarchy.</p>
+                    <img src="assets/image10.png" alt="Grid Manager Window" class="doc-image">
+                </section>
+
+                <!-- Grid Modes -->
+                <section id="modes">
+                    <h2>🎯 Grid Modes Selection</h2>
+                    <p>In the <strong>Grid Layout</strong> section, select your desired Grid Mode.</p>
+
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Feature / Aspect</th>
+                                <th>Symmetry Mode</th>
+                                <th>Dynamic Mode</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Concept</strong></td>
+                                <td>Auto-generates an even grid</td>
+                                <td>Freely place and customize lines</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Editing</strong></td>
+                                <td>Locked (no manual changes)</td>
+                                <td>Fully interactive (add, move, delete)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Workflow</strong></td>
+                                <td>Fast and automatic</td>
+                                <td>Slower but highly precise</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Best For</strong></td>
+                                <td>Uniform layouts, grids, spacing</td>
+                                <td>Custom UI, complex layouts, fine control</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Layout Behavior -->
+                <section id="behavior">
+                    <h2>📐 Layout Behavior</h2>
+                    <p>Below the Grid Mode option, choose the Grid Behavior to control what happens when the screen
+                        resizes.</p>
+
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Layout Behavior</th>
+                                <th>The Gist</th>
+                                <th>When Screen Resizes...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Fixed Spacing</strong></td>
+                                <td>Lines locked to exact pixel positions</td>
+                                <td>Lines stay exactly in place</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Stretch with Canvas</strong></td>
+                                <td>Lines use percentage-based positions</td>
+                                <td>Grid stretches/squashes to fit screen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Core Features & Usage -->
+                <section id="core-features">
+                    <h2>🛠 Core Features & Usage</h2>
+
+                    <h3>1. Symmetry Mode (Mathematical Generation)</h3>
+                    <p><strong>What it does:</strong> Instantly generates a perfectly even, infinite grid across your
+                        canvas.</p>
+                    <p><strong>How to use it:</strong> Choose <strong>Fixed Spacing</strong> for absolute pixel
+                        distances (e.g., a line every 50px), or choose <strong>Stretch</strong> to divide your canvas
+                        into flexible rows/columns (e.g., 16 columns by 9 rows) that auto-scale continuously with your
+                        screen resolution. Click the built-in <strong>Presets</strong> for instant 16:9 or 3x3 grids!
+                    </p>
+
+                    <h3>2. Dynamic Mode (Custom Wireframing)</h3>
+                    <p><strong>What it does:</strong> Unlocks your grid so you can manually place, drag, and design
+                        custom guide lines precisely where you need them. You can decide if your custom lines are pinned
+                        at exact pixels, or if they act as percentages that stretch with the screen.</p>
+                    <p><strong>How to Add & Edit Lines:</strong> Enable <strong>Edit Mode</strong>
+                        (<kbd>Alt</kbd>+<kbd>E</kbd>), then:</p>
+                    <ul>
+                        <li><strong>Right-Click Menu:</strong> Right-click the Scene View (or press
+                            <kbd>Alt</kbd>+<kbd>H</kbd> / <kbd>Alt</kbd>+<kbd>V</kbd>). A glowing new line will attach
+                            to your cursor. Simply move your mouse to the desired position and Left-Click to drop it.
+                        </li>
+                        <li><strong>Axis Dragging:</strong> Toggle <strong>[Grid] Add Lines</strong> On. Hover your
+                            mouse over the bright center horizontal or vertical axis in your scene, and click and drag
+                            outward to pull a brand new line directly out of the center.</li>
+                        <li><strong>Deleting:</strong> Click a line to select it (or Ctrl/Cmd + Click for multi-select)
+                            and press <kbd>Alt</kbd>+<kbd>Backspace</kbd> to wipe them clean.</li>
+                    </ul>
+                    <img src="assets/image11.png" alt="Adding lines by Axis Dragging" class="doc-image">
+                    <div class="image-caption">Adding lines by Axis Dragging</div>
+
+                    <h3>3. Bi-Directional Magnetic Snapping</h3>
+                    <p><strong>What it does:</strong> Completely eliminates layout guesswork by featuring intelligent,
+                        two-way magnetic snapping between your grid and your UI elements.</p>
+                    <p><strong>How to use it:</strong></p>
+                    <ul>
+                        <li><strong>Snap Guide Lines to UI (<kbd>Alt</kbd>+<kbd>S</kbd>):</strong> When you are manually
+                            moving or drawing a new Grid Line, that line will magically detect your UI and snap flush
+                            against the edges and centers of your existing UI elements.</li>
+                        <li><strong>Snap UI to Grid (<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>):</strong> When
+                            holding Unity's Rect Tool (T), dragging a UI Element will cause it to aggressively magnetize
+                            perfectly to your custom grid lines!</li>
+                    </ul>
+
+                    <h3>4. Visual Feedback</h3>
+                    <p><strong>What it does:</strong> Provides instant, satisfying visual cues directly over your Canvas
+                        without cluttering your hierarchy.</p>
+                    <p><strong>How it works:</strong> When a UI element successfully snaps into place, the tool draws
+                        beautiful, neon L-brackets and a crosshair perfectly wrapping your element to confirm the lock.
+                        Additionally, grid lines actively react to your mouse, intelligently shifting to high-contrast
+                        hover and drag colors when you grab them.</p>
+                    <img src="assets/image12.png" alt="Visual Feedback" class="doc-image">
+                    <div class="image-caption">Visual Feedback</div>
+
+                    <h3>5. Fluid Conversion (Fixed vs. Stretch)</h3>
+                    <p><strong>The Feature:</strong> Dynamic mode isn't just about placing custom lines—it's a
+                        mathematical engine for controlling how those lines react natively to multiple screen
+                        resolutions.</p>
+                    <p><strong>The Workflow:</strong> If you built a complex layout using absolute pixel coordinates
+                        (Fixed) and suddenly need your game to support Ultrawide screens, you do not need to start over!
+                        Simply toggle the Dynamic dropdown from <strong>Fixed</strong> to <strong>Stretch</strong>. A
+                        dialog will confirm the conversion, instantly recalculating all your exact pixel bounds into
+                        fluid percentages relative to the Canvas size, making your entire custom grid fully responsive.
+                    </p>
+                    <img src="assets/image13.png" alt="Conversion" class="doc-image">
+                    <div class="image-caption">Fluid Conversion</div>
+                </section>
+
+                <!-- Shortcuts -->
+                <section id="shortcuts">
+                    <h2>⌨️ Shortcuts</h2>
+                    <p>Master these hotkeys to drastically speed up your UI layout process.</p>
+
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Shortcut Action</th>
+                                <th>Key Combination</th>
+                                <th>Context / Condition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Toggle Grid Visibility</td>
+                                <td><kbd>Alt</kbd> + <kbd>G</kbd></td>
+                                <td>Global (Scene View)</td>
+                            </tr>
+                            <tr>
+                                <td>Toggle Edit Mode</td>
+                                <td><kbd>Alt</kbd> + <kbd>E</kbd></td>
+                                <td>When in Dynamic Mode</td>
+                            </tr>
+                            <tr>
+                                <td>Toggle Snap to Elements</td>
+                                <td><kbd>Alt</kbd> + <kbd>S</kbd></td>
+                                <td>When Edit Mode is active</td>
+                            </tr>
+                            <tr>
+                                <td>Toggle Universal Snapping</td>
+                                <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td>
+                                <td>Global (applies to standard UI design)</td>
+                            </tr>
+                            <tr>
+                                <td>Add Horizontal Line</td>
+                                <td><kbd>Alt</kbd> + <kbd>H</kbd></td>
+                                <td>When Edit Mode is active</td>
+                            </tr>
+                            <tr>
+                                <td>Add Vertical Line</td>
+                                <td><kbd>Alt</kbd> + <kbd>V</kbd></td>
+                                <td>When Edit Mode is active</td>
+                            </tr>
+                            <tr>
+                                <td>Delete Selected Line(s)</td>
+                                <td><kbd>Alt</kbd> + <kbd>Backspace</kbd></td>
+                                <td>When Edit Mode is active</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Limitations & FAQ -->
+                <section id="limitations">
+                    <h2>🚧 Current Limitations & Known Behaviors</h2>
+
+                    <div class="callout warning">
+                        <div class="callout-icon">⚠️</div>
+                        <div class="callout-content">
+                            <p><strong>1. Resizing vs. Translating (Moving) UI Elements</strong><br>
+                                <em>The Limitation:</em> Magnetic snapping works flawlessly when you are
+                                <strong>moving</strong> a UI element across the screen. However, if you grab the corner
+                                handles of the Rect Tool to physically <strong>resize/scale</strong> the element, the
+                                resizing action will not snap to the grid lines.<br>
+                                <em>Why:</em> The snapping engine calculates center-mass displacement to move objects
+                                safely. Forcibly altering an object's <code>sizeDelta</code> during a live drag proved
+                                too destructive to complex UI hierarchies, so snapping is currently restricted to
+                                translation (moving) only.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>2. World Space Canvases Are Unsupported</h3>
+                    <p><em>The Limitation:</em> The Grid Guide will explicitly refuse to render on any Canvas set to
+                        World Space.<br>
+                        <em>Why:</em> World Space canvases exist in local 3D scene geometry which requires entirely
+                        different matrix calculations and depth-sorting. We deliberately restricted the tool to Screen
+                        Space (Overlay) and Screen Space (Camera) to ensure editor performance remains lightweight,
+                        fast, and mathematically perfect for where 95% of UI is actively built.
+                    </p>
+
+                    <h3>3. Extreme Grid Densities (Performance)</h3>
+                    <p><em>The Limitation:</em> If you enter Symmetry Mode (Fixed Spacing) and set your pixel spacing to
+                        an incredibly low number (e.g., 1 unit) on a massive 4K canvas, your Unity Editor will
+                        experience heavy frame drops.<br>
+                        <em>Why:</em> The Grid uses native <code>UnityEditor.Handles</code> to guarantee high-fidelity,
+                        anti-aliased lines. Forcing the Editor GUI to loop and render 4,000+ individual lines
+                        simultaneously will brute-force the editor rendering limits. Keep your grid spacing above 10
+                        whenever possible!
+                    </p>
+
+                    <h3>4. Single-Canvas Support</h3>
+                    <p><em>The Limitation:</em> You can only save up-to 1 canvas data.<br>
+                        <em>Why:</em> To support multiple canvas, we would need a saving system. Its mildly complex and
+                        I have planned to add this in the pro version.
+                    </p>
+
+                    <h2 id="faq">💡 FAQ & Troubleshooting Guide</h2>
+
+                    <ul class="faq-list">
+                        <li><strong>1. Why the grid isn't showing up in my Scene View!</strong><br>
+                            <em>The Cause:</em> You either haven't selected a UI element, the Grid is toggled off, or
+                            you are using an unsupported Canvas type.<br>
+                            <em>The Fix:</em> Make sure you actually click on a UI element in your Hierarchy. Ensure
+                            your Canvas Render Mode is set to Screen Space - Overlay or Screen Space - Camera. Press
+                            <kbd>Alt</kbd>+<kbd>G</kbd> to ensure grid visibility is toggled On.
+                        </li>
+
+                        <li><strong>2. My UI elements aren't snapping to the grid lines.</strong><br>
+                            <em>The Cause:</em> You are using the wrong Unity transform tool, or snapping is
+                            disabled.<br>
+                            <em>The Fix:</em> The magnetic snapping engine only runs when you are actively using Unity's
+                            Rect Tool (Shortcut: T). Make sure the Rect Tool is selected, and double-check that "Snap UI
+                            Elements to Grid" is enabled (<kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>).
+                        </li>
+
+                        <li><strong>3. I can't click, drag, or delete any of the grid lines!</strong><br>
+                            <em>The Cause:</em> You are likely in Symmetry Mode, or Edit Mode is turned off.<br>
+                            <em>The Fix:</em> Symmetry Mode mathematically generates a locked, perfect grid that cannot
+                            be manually edited. To freely drag or delete lines, switch to Dynamic Mode and ensure Edit
+                            Mode is toggled ON (<kbd>Alt</kbd>+<kbd>E</kbd>).
+                        </li>
+
+                        <li><strong>4. What happens when I switch my Dynamic Grid from "Fixed Position" to
+                                "Stretch"?</strong><br>
+                            <em>The Cause:</em> People worry they will lose their custom layout if they change modes
+                            mid-project.<br>
+                            <em>The Answer:</em> Your grid is safe! The asset has a built-in conversion protocol. If you
+                            built a "Fixed Position" grid (exact pixel coordinates) and switch to "Stretch" (fluid
+                            percentages), an alert will pop up asking to convert your lines. It will perfectly
+                            recalculate your exact pixel locations into perfect percentages of your current canvas
+                            resolution.
+                        </li>
+
+                        <li><strong>5. I right-clicked the Scene View, but the Grid Menu didn't pop up!</strong><br>
+                            <em>The Cause:</em> Unity's default right-click menu is overriding the tool.<br>
+                            <em>The Fix:</em> The custom right-click grid menu (with Add Line and Delete Line options)
+                            only hijacks the right-click button when you are actively inside Dynamic Mode with Edit Mode
+                            toggled ON.
+                        </li>
+
+                        <li><strong>6. The "Add Line" shortcuts (Alt+H / Alt+V) aren't doing anything.</strong><br>
+                            <em>The Cause:</em> You must be actively in Edit mode for the line-drawing shortcuts to
+                            listen for your input.<br>
+                            <em>The Fix:</em> Switch to Dynamic Mode and press <kbd>Alt</kbd>+<kbd>E</kbd> to enter Edit
+                            Mode. Once active, the <kbd>Alt</kbd>+<kbd>H</kbd> and <kbd>Alt</kbd>+<kbd>V</kbd> shortcuts
+                            will spawn line previews perfectly.
+                        </li>
+
+                        <li><strong>7. My UI elements are jittering or jumping weirdly when I try to snap
+                                them.</strong><br>
+                            <em>The Cause:</em> Your "Element Snap Distance" tolerance is set too high in the
+                            settings.<br>
+                            <em>The Fix:</em> Open the Grid Manager window and expand the "Universal UI Snapping" card.
+                            Lower the Snap Distance back to 1. Values higher than 1 can cause elements to jump
+                            aggressively between nearby lines and create visual artifacts.
+                        </li>
+
+                        <li><strong>8. The Alt + [Key] shortcuts are conflicting with another asset I own.</strong><br>
+                            <em>The Cause:</em> Shortcut overlap between popular Unity assets is common.<br>
+                            <em>The Fix:</em> All UI Furnace shortcuts are natively integrated into Unity! Simply go to
+                            <code>Edit > Shortcuts...</code> at the top of Unity, search for <code>"UI Furnace"</code>,
+                            and you can rebind every single shortcut to whatever keys you prefer.
+                        </li>
+
+                        <li><strong>9. Can I snap multiple UI elements at the exact same time?</strong><br>
+                            <em>The Answer:</em> Yes! The engine iterates through your active selection pool. You can
+                            highlight 5 different UI elements with the Rect Tool, drag them together, and all 5 will
+                            individually detect the grid lines and snap their respective borders perfectly into place.
+                        </li>
+                    </ul>
+                    <p><em>If the issue persists, please contact support or refer to the latest documentation.</em></p>
+                </section>
+
+                <section id="credits">
+                    <h2>❤️ Credits & Support</h2>
+                    <p>Developed by AZSoftStudio.</p>
+                    <p>For support, updates, and additional tools, please refer to the official documentation or
+                        contact:</p>
+                    <p>Website: <a href="https://www.azsoftstudio.workers.dev/" target="_blank"
+                            rel="noopener">https://www.azsoftstudio.workers.dev/</a></p>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/bg-animation.js"></script>
+</body>
+
+</html>
