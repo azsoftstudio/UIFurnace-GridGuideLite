@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Theme Toggle Logic
   const themeToggle = document.getElementById('themeToggle');
-  const preferDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  // Set initial theme based on local storage or system preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-    updateThemeIcon('light');
-  } else if (!savedTheme && !preferDark) {
-    document.documentElement.setAttribute('data-theme', 'light');
-    updateThemeIcon('light');
+  // Initialize theme (Defines Dark as absolute default if no local cache exists)
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeIcon(currentTheme);
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+    updateThemeIcon('dark');
   }
 
   themeToggle.addEventListener('click', () => {
