@@ -1,10 +1,10 @@
 <div align="center">
   
-# 💠 UI Furnace – Grid Guide Tool
+# 💠 UI Furnace – Grid Guide Tool v1.0
 
-[![Unity Asset Store](https://img.shields.io/badge/Published_On-Unity_Asset_Store-000000?style=for-the-badge&logo=unity&logoColor=white)](https://u3d.as/3Cdk/)
-[![Made with Vanilla HTML/CSS/JS](https://img.shields.io/badge/Documentation-Vanilla_Web-0ea5e9?style=for-the-badge)](https://azsoftstudio.github.io/UIFurnace-GridGuideLite/)
-[![License: Unity](https://img.shields.io/badge/License-Unity-success?style=for-the-badge)](https://unity.com/legal/eula)
+[![Unity Asset Store](https://img.shields.io/badge/Published_On-Unity_Asset_Store-000000?style=for-the-badge&logo=unity&logoColor=white)](https://assetstore.unity.com/)
+[![Made with Vanilla HTML/CSS/JS](https://img.shields.io/badge/Documentation-Vanilla_Web-0ea5e9?style=for-the-badge)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#)
 
 *A premium, grid-based layout assistant for UI design in Unity.*
 
@@ -20,6 +20,8 @@
 
 The **UI Furnace – Grid Guide Tool** is a grid-based layout assistant for UI design in Unity. It provides visual grid overlays, bi-directional magnetic snapping functionality, and flexible grid modes to help align and organize UI elements with absolute precision—directly over your Canvas without cluttering your hierarchy.
 
+**💡 Note:** This is a lightweight, Editor-only tool and will *not* affect your game's runtime performance!
+
 ### ⚡ Quick Start & Workflow
 > `Enable` ➔ `Select` ➔ `Customize` ➔ `Snap` ➔ `Refine`
 
@@ -33,11 +35,11 @@ The **UI Furnace – Grid Guide Tool** is a grid-based layout assistant for UI d
 ## 🎯 Dual Grid Modes
 
 ### 1. 📏 Symmetry Mode (Mathematical Generation)
-- **What it does:** Instantly generates a perfectly even, infinite grid across your canvas.
+- **What it does:** Instantly generates a perfectly even grid across your canvas.
 - **How to use it:** Choose **Fixed Spacing** for absolute pixel distances (e.g. 50px bounds), or choose **Stretch** to divide your canvas into flexible rows/columns that auto-scale continuously.
 
 ### 2. 🎛️ Dynamic Mode (Custom Wireframing)
-- **What it does:** Unlocks your grid so you can manually place, drag, and design custom guide lines precisely where you need them.
+- **What it does:** Dynamic Grid lets you place and move grid lines freely. Determine whether custom lines are pinned precisely at exact pixels or if they act as responsive percentages.
 - **How to Add & Edit:** Enable **Edit Mode** (`Alt`+`E`), right-click the Scene View, or toggle Axis Dragging to pull lines natively out of the axis center.
 
 ---
@@ -68,11 +70,12 @@ The **UI Furnace – Grid Guide Tool** is a grid-based layout assistant for UI d
 
 ---
 
-## 🚧 FAQ & Limitations
+## 🚧 Current Limitations & Known Behaviors
 
-- **Cannot Resize Using Grid**: Snapping only triggers across translation (moving) limits. Altering `sizeDelta` physically via Rect handles avoids snapping to protect complex UI hierarchies.
-- **Screen Space Render Modes Only**: Deliberately disabled on World Space Canvases to maintain pristine GUI performance matrix calculations.
-- **Screen Jittering**: If elements jump wildly on snap, your Universal Snap Distance in settings is too high. Reset it to `1`.
+- **Resizing vs. Moving Elements**: Snap to Grid currently supports precise positioning. Advanced resizing workflows may be expanded in future updates. 
+- **Screen Space Canvases**: Grid Guide currently supports Screen Space - Overlay and Screen Space - Camera canvases. This ensures the tool remains incredibly lightweight and mathematically perfect for actively building UI. Support for local 3D World Space may be added in the future.
+- **High Grid Densities**: Keep your grid spacing above `10` whenever possible. Grid Guide uses high-fidelity, anti-aliased lines for a premium visual experience. Generating thousands of microscopic lines simultaneously may slow down Editor rendering.
+- **Single Canvas Data**: The Lite version saves grid data for the currently active Canvas. Advanced multi-canvas saving and state management is planned for the upcoming Pro version.
 
 ---
 

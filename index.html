@@ -73,11 +73,11 @@
 
                 <!-- Overview Section -->
                 <section id="hero" class="hero-section">
-                    <div class="tag">UI Furnace Framework</div>
+                    <div class="tag">UI Furnace Framework v1.0</div>
                     <h1 class="glow-text">Grid Guide Tool</h1>
                     <p class="subtitle">A grid-based layout assistant for UI design in Unity. Provides visual grid
                         overlays, snapping functionality, and flexible grid modes to help align and organize UI elements
-                        with precision.</p>
+                        with precision.<br><br>💡 <strong>Note:</strong> This is a lightweight, Editor-only tool and will <em>not</em> affect your game's runtime performance.</p>
 
                     <div class="workflow-container">
                         <div class="workflow-step">Enable</div>
@@ -254,8 +254,7 @@
                     <h2>🛠 Core Features & Usage</h2>
 
                     <h3>1. Symmetry Mode (Mathematical Generation)</h3>
-                    <p><strong>What it does:</strong> Instantly generates a perfectly even, infinite grid across your
-                        canvas.</p>
+                    <p><strong>What it does:</strong> Instantly generates a perfectly even grid across your canvas.</p>
                     <p><strong>How to use it:</strong> Choose <strong>Fixed Spacing</strong> for absolute pixel
                         distances (e.g., a line every 50px), or choose <strong>Stretch</strong> to divide your canvas
                         into flexible rows/columns (e.g., 16 columns by 9 rows) that auto-scale continuously with your
@@ -263,8 +262,7 @@
                     </p>
 
                     <h3>2. Dynamic Mode (Custom Wireframing)</h3>
-                    <p><strong>What it does:</strong> Unlocks your grid so you can manually place, drag, and design
-                        custom guide lines precisely where you need them. You can decide if your custom lines are pinned
+                    <p><strong>What it does:</strong> Dynamic Grid lets you place and move grid lines freely. You can decide if your custom lines are pinned
                         at exact pixels, or if they act as percentages that stretch with the screen.</p>
                     <p><strong>How to Add & Edit Lines:</strong> Enable <strong>Edit Mode</strong>
                         (<kbd>Alt</kbd>+<kbd>E</kbd>), then:</p>
@@ -306,14 +304,11 @@
                     <div class="image-caption">Visual Feedback</div>
 
                     <h3>5. Fluid Conversion (Fixed vs. Stretch)</h3>
-                    <p><strong>The Feature:</strong> Dynamic mode isn't just about placing custom lines—it's a
-                        mathematical engine for controlling how those lines react natively to multiple screen
-                        resolutions.</p>
-                    <p><strong>The Workflow:</strong> If you built a complex layout using absolute pixel coordinates
-                        (Fixed) and suddenly need your game to support Ultrawide screens, you do not need to start over!
+                    <p><strong>The Feature:</strong> Dynamic mode isn't just about placing custom lines—it lets you control how those lines react to multiple screen resolutions.</p>
+                    <p><strong>The Workflow:</strong> If you built a layout using exact pixel coordinates
+                        (Fixed) and suddenly need your game to support Ultrawide screens, you don't need to start over!
                         Simply toggle the Dynamic dropdown from <strong>Fixed</strong> to <strong>Stretch</strong>. A
-                        dialog will confirm the conversion, instantly recalculating all your exact pixel bounds into
-                        fluid percentages relative to the Canvas size, making your entire custom grid fully responsive.
+                        dialog will confirm the conversion, perfectly recalculating all your exact pixel locations into fluid percentages relative to the Canvas size.
                     </p>
                     <img src="assets/image13.png" alt="Conversion" class="doc-image">
                     <div class="image-caption">Fluid Conversion</div>
@@ -379,42 +374,26 @@
                     <div class="callout warning">
                         <div class="callout-icon">⚠️</div>
                         <div class="callout-content">
-                            <p><strong>1. Resizing vs. Translating (Moving) UI Elements</strong><br>
-                                <em>The Limitation:</em> Magnetic snapping works flawlessly when you are
-                                <strong>moving</strong> a UI element across the screen. However, if you grab the corner
-                                handles of the Rect Tool to physically <strong>resize/scale</strong> the element, the
-                                resizing action will not snap to the grid lines.<br>
-                                <em>Why:</em> The snapping engine calculates center-mass displacement to move objects
-                                safely. Forcibly altering an object's <code>sizeDelta</code> during a live drag proved
-                                too destructive to complex UI hierarchies, so snapping is currently restricted to
-                                translation (moving) only.
+                            <p><strong>1. Resizing vs. Moving UI Elements</strong><br>
+                                <em>The Behavior:</em> Snap to Grid currently supports precise positioning. When you move an element with the Rect Tool, it magnetizes perfectly to your custom grid lines.<br>
+                                <em>Note on Resizing:</em> Grabbing the corner handles to physically scale an element does not currently snap. Advanced resizing workflows may be expanded in future updates.
                             </p>
                         </div>
                     </div>
 
-                    <h3>2. World Space Canvases Are Unsupported</h3>
-                    <p><em>The Limitation:</em> The Grid Guide will explicitly refuse to render on any Canvas set to
-                        World Space.<br>
-                        <em>Why:</em> World Space canvases exist in local 3D scene geometry which requires entirely
-                        different matrix calculations and depth-sorting. We deliberately restricted the tool to Screen
-                        Space (Overlay) and Screen Space (Camera) to ensure editor performance remains lightweight,
-                        fast, and mathematically perfect for where 95% of UI is actively built.
+                    <h3>2. World Space Canvases</h3>
+                    <p><em>Current Behavior:</em> Grid Guide currently supports <strong>Screen Space - Overlay</strong> and <strong>Screen Space - Camera</strong> canvases.<br>
+                        <em>Why:</em> This ensures the tool remains incredibly lightweight and mathematically perfect for where 95% of UI layout actively happens. Support for local 3D World Space canvases may be added in the future.
                     </p>
 
-                    <h3>3. Extreme Grid Densities (Performance)</h3>
-                    <p><em>The Limitation:</em> If you enter Symmetry Mode (Fixed Spacing) and set your pixel spacing to
-                        an incredibly low number (e.g., 1 unit) on a massive 4K canvas, your Unity Editor will
-                        experience heavy frame drops.<br>
-                        <em>Why:</em> The Grid uses native <code>UnityEditor.Handles</code> to guarantee high-fidelity,
-                        anti-aliased lines. Forcing the Editor GUI to loop and render 4,000+ individual lines
-                        simultaneously will brute-force the editor rendering limits. Keep your grid spacing above 10
-                        whenever possible!
+                    <h3>3. High Grid Densities</h3>
+                    <p><em>Best Practice:</em> Keep your grid spacing above 10 pixels whenever possible.<br>
+                        <em>Why:</em> Grid Guide uses high-fidelity, anti-aliased lines for a premium visual experience. Generating thousands of microscopic lines (like a 1px spacing on a 4K monitor) may slow down Editor rendering.
                     </p>
 
-                    <h3>4. Single-Canvas Support</h3>
-                    <p><em>The Limitation:</em> You can only save up-to 1 canvas data.<br>
-                        <em>Why:</em> To support multiple canvas, we would need a saving system. Its mildly complex and
-                        I have planned to add this in the pro version.
+                    <h3>4. Single-Canvas Data</h3>
+                    <p><em>Current Behavior:</em> The Lite version saves grid data for the currently active Canvas.<br>
+                        <em>Future Plans:</em> Advanced multi-canvas saving and state management is planned for the upcoming Pro version.
                     </p>
 
                     <h2 id="faq">💡 FAQ & Troubleshooting Guide</h2>
