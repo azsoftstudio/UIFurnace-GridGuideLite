@@ -675,6 +675,17 @@ code {
   }
 }
 
+/* Feature Cards CSS */
+.features-grid .feature-card {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.features-grid .feature-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
 .ambient-line {
   position: absolute;
   background: rgba(255, 255, 255, 0.03);

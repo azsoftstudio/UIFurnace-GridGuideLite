@@ -22,10 +22,11 @@ The **UI Furnace – Grid Guide Tool** is a grid-based layout assistant for UI d
 
 **💡 Note:** This is a lightweight, Editor-only tool and will *not* affect your game's runtime performance!
 
-### ⚡ Quick Power Features
-- **Bi-Directional Magnetic Snapping:** Custom grids perfectly magnetize to your UI bounds, and your UI elements lock precisely onto your layouts.
-- **Fluid Canvas Conversion:** Built-in dynamic engine inherently recalibrates static pixel coordinates into fully responsive percentage margins automatically.
-- **High-Fidelity Visual Cues:** Gorgeous, anti-aliased neon-bracket feedback seamlessly verifies your dragging bounds.
+### ⚡ Main Features
+
+| 🧲 Bi-Directional Snapping | 🌊 Fluid Canvas Conversion | 👁️ Visual Feedback Cues |
+| :--- | :--- | :--- |
+| **Grids snap to UI**, and **UI elements magnetically lock** directly onto your layout boundaries. | **Instantly recalculate** rigid absolute pixels into perfectly responsive **percentage bounds**. | **Premium, anti-aliased neon-bracket overlays** visibly confirm your exact snapping constraints. |
 
 > *🚀 **Updates Incoming:** We are continuously improving the UI Furnace framework! Exciting updates, advanced workflows, and deeply expanded layout capabilities are actively planned for future releases.*
 
