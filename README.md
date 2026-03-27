@@ -24,9 +24,9 @@ The **UI Furnace – Grid Guide Tool** is a grid-based layout assistant for UI d
 
 ### ⚡ Main Features
 
-| 🧲 Bi-Directional Snapping | 🌊 Fluid Canvas Conversion | 👁️ Visual Feedback Cues |
-| :--- | :--- | :--- |
-| **Grids snap to UI**, and **UI elements magnetically lock** directly onto your layout boundaries. | **Instantly recalculate** rigid absolute pixels into perfectly responsive **percentage bounds**. | **Premium, anti-aliased neon-bracket overlays** visibly confirm your exact snapping constraints. |
+| 🧲 Snap to Grid | 📏 Symmetry Generation | 🎛️ Dynamic Editing | 👁️ Visual Feedback |
+| :--- | :--- | :--- | :--- |
+| Snap elements into perfect alignment instantly. | Create evenly spaced layouts in seconds. | Add, move, or remove lines anytime for full control. | See exactly how everything aligns with highlight lines. |
 
 > *🚀 **Updates Incoming:** We are continuously improving the UI Furnace framework! Exciting updates, advanced workflows, and deeply expanded layout capabilities are actively planned for future releases.*
 
