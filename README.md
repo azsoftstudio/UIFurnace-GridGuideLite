@@ -3,7 +3,7 @@
 # 💠 UI Furnace – Grid Guide Tool v1.0
 
 [![Unity Asset Store](https://img.shields.io/badge/Published_On-Unity_Asset_Store-000000?style=for-the-badge&logo=unity&logoColor=white)](https://assetstore.unity.com/)
-[![Made with Vanilla HTML/CSS/JS](https://img.shields.io/badge/Documentation-Vanilla_Web-0ea5e9?style=for-the-badge)](#)
+[![Made with Vanilla HTML/CSS/JS](https://img.shields.io/badge/Documentation-Vanilla_Web-0ea5e9?style=for-the-badge)](https://azsoftstudio.github.io/UIFurnace-GridGuideLite/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)](#)
 
 *A premium, grid-based layout assistant for UI design in Unity.*
@@ -21,6 +21,13 @@
 The **UI Furnace – Grid Guide Tool** is a grid-based layout assistant for UI design in Unity. It provides visual grid overlays, bi-directional magnetic snapping functionality, and flexible grid modes to help align and organize UI elements with absolute precision—directly over your Canvas without cluttering your hierarchy.
 
 **💡 Note:** This is a lightweight, Editor-only tool and will *not* affect your game's runtime performance!
+
+### ⚡ Quick Power Features
+- **Bi-Directional Magnetic Snapping:** Custom grids perfectly magnetize to your UI bounds, and your UI elements lock precisely onto your layouts.
+- **Fluid Canvas Conversion:** Built-in dynamic engine inherently recalibrates static pixel coordinates into fully responsive percentage margins automatically.
+- **High-Fidelity Visual Cues:** Gorgeous, anti-aliased neon-bracket feedback seamlessly verifies your dragging bounds.
+
+> *🚀 **Updates Incoming:** We are continuously improving the UI Furnace framework! Exciting updates, advanced workflows, and deeply expanded layout capabilities are actively planned for future releases.*
 
 ### ⚡ Quick Start & Workflow
 > `Enable` ➔ `Select` ➔ `Customize` ➔ `Snap` ➔ `Refine`
